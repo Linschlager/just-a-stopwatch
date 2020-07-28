@@ -1,0 +1,77 @@
+:root {
+  font-family: "Lato", sans-serif;
+  --fg: black;
+  --fg-inactive: lightgray;
+  --bg: white;
+}
+
+.dark {
+  --fg: lightgray;
+  --fg-inactive: gray;
+  --bg: black;
+}
+
+html,
+body,
+#root {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.timer h1 {
+  align-self: center;
+  font-size: 20vw;
+  font-weight: 100;
+  flex-direction: row;
+  margin: 0;
+}
+
+.h::after,
+.m::after {
+  content: ":";
+}
+
+.active {
+  font-weight: 300;
+}
+
+.inactive {
+  color: var(--fg-inactive);
+}
+
+.time-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.time-actions .time-action-button {
+  font-family: Lato, sans-serif;
+  appearance: none;
+  border-radius: 0;
+  color: var(--fg);
+  border: 1px solid var(--fg);
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  font-size: 5vw;
+  outline: 0;
+  background-color: transparent;
+  opacity: 0;
+}
+
+*:hover > .time-actions > .time-action-button {
+  opacity: 1;
+}
